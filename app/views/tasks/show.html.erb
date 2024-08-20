@@ -1,0 +1,9 @@
+<h1>Pro pro</h1>
+<%= @task.title %>
+<p><%= @task.details %></p>
+<%= link_to "update", tasks_edit_path(@task)  %>
+<%= link_to "Delete",
+  index_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<a href="../index">back to checklist</a>
